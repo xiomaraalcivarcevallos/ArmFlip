@@ -37,7 +37,7 @@ Side View:
          |||
     ___Fixed Base___
 ```
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/1bd21b31-0e07-494f-b2bb-ce6a8a641f25" />
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/40449817-146c-4d44-995e-cc6b75de5efe" />
 
 #### Advantages:
 ✅ **Precise and smooth control**: Electronically controlled motor allows variable speed
@@ -68,7 +68,7 @@ Front View:
            |||
        [Motor/Axis]
 ```
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/5a5b13f4-70df-403f-8ef2-e1fa830feacb" />
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/fe624f46-b4d6-4346-97e8-2e4f3c947595" />
 
 #### Advantages:
 ✅ **More "natural" movement**: Simulates flip trajectory with translation
@@ -154,36 +154,23 @@ Front View:
 
 ### Roles and Responsibilities
 
-**Systems Lead / Technical Manager**
-- Coordinate integration of disciplines
-- Manage schedule and milestones
-- Main point of contact
+**Person 1**
+- Coordinate the project and manage milestones
+- Integrate the Kinova Gen3 Lite robot 
+- Define system architecture and safety requirements
 
-**Mechanical Designer / 3D**
-- CAD 3D modeling
-- Structural analysis
-- Material selection
-- Manufacturing drawings
+**Person 2**
+- Design the mechanical structure (CAD)
+- Select materials and prepare manufacturing drawings 
+- Create concept sketches and visual documentation
 
-**Sketch Designer / Conceptualization**
-- Visual exploration of concepts
-- Movement storyboarding
-- Graphic documentation
-- Presentations
+**Person 3**
+- Develop control algorithms and robot motion
+- Run simulations and test trajectories
+- Implement and test the software
 
-**Programmer / Control**
-- Control algorithm development
-- Hardware integration
-- Software simulations
-- Code testing
 
-**Robotics Specialist (if applicable)**
-- Interface with existing robot arm
-- Kinematics and dynamics
-- Calibration
 
-### Team Meetings
-- **Daily standup** (15 min): progress and blockers
-- **Weekly review** (1 hour): detailed technical review
-- **Sprint planning** (at start of each phase)
-- **Milestone reviews** (at end of each phase)
+
+
+
