@@ -37,6 +37,7 @@ Side View:
          |||
     ___Fixed Base___
 ```
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/1bd21b31-0e07-494f-b2bb-ce6a8a641f25" />
 
 #### Advantages:
 ✅ **Precise and smooth control**: Electronically controlled motor allows variable speed
@@ -67,6 +68,7 @@ Front View:
            |||
        [Motor/Axis]
 ```
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/5a5b13f4-70df-403f-8ef2-e1fa830feacb" />
 
 #### Advantages:
 ✅ **More "natural" movement**: Simulates flip trajectory with translation
