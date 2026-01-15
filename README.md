@@ -1,5 +1,4 @@
-# AIRFLIP 
-## Rotary Gantry System for Small-Scale Cobots (UR3e)
+# AIRFLIP - Rotary Gantry System for Small-Scale Cobots (UR3e)
 
 ## Overview
 This project presents a **7th-Axis Rotary Gantry** (External Axis) engineered to transcend the workspace limitations of compact collaborative robots. While cobots like the **Universal Robots UR3e** offer industry-leading precision and safety, their **500 mm reach** often disqualifies them from large-format industrial tasks.
