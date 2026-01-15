@@ -75,6 +75,6 @@ The system operates using a **Coordinated Spiral Kinematic Path**:
 ---
 
 ## Acknowledgements
-* Creation of GitHub template: Ma*ita Georganta – Robotic Sensing Expert
+* Creation of GitHub template: Marita Georganta – Robotic Sensing Expert
 
 * Creation of MRAC-IAAC GitHub Structure: Huanyu Li – Robotic Researcher
