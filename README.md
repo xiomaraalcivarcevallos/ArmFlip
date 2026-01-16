@@ -23,14 +23,13 @@ After analyzing these ideas, we decided to make some sketches about what would b
 <img width="720" height="342" alt="Screenshot 2026-01-16 155040" src="https://github.com/user-attachments/assets/9c1b1d2a-1434-44e6-98b4-17721c375bb6" />
 <img width="815" height="497" alt="image" src="https://github.com/user-attachments/assets/e512b953-55c7-4526-94c6-ee531e933830" />
 
-This project presents a **7th-Axis Rotary Gantry** (External Axis) engineered to transcend the workspace limitations and kinematic constraints of compact collaborative robots. While cobots like the **Universal Robots UR3e** offer industry-leading precision, their **500 mm reach** and fixed base often lead to **kinematic singularities**—mathematical points where the robot loses a degree of freedom and cannot move in specific directions—disqualifying them from large-format or complex industrial tasks.
+After analyzing these ideas, we determined that the best approach to achieve this movement would be by implementing a Cartesian gantry system, since the previous ideas are less viable and more complex to develop. This project presents a 7th-Axis Rotary Gantry (External Axis) engineered to transcend the workspace limitations and kinematic constraints of compact collaborative robots. While cobots like the Universal Robots UR3e offer industry-leading precision, their 500 mm reach and fixed base often lead to kinematic singularities—mathematical points where the robot loses a degree of freedom and cannot move in specific directions—disqualifying them from large-format or complex industrial tasks.
 
-**Core Innovation:** Our solution integrates the UR3e onto a rotary Robotic Transfer Unit (RTU). By introducing **Kinematic Redundancy**, we decouple the robot's motion from a static base. This "Workspace Multiplier" allows the system to **bypass singularity zones** (such as wrist alignment or elbow lock) by dynamically rotating the base. This ensures the robot can access areas and zones that are normally inaccessible due to the robot's inherent singularities, maintaining continuous, fluid motion throughout the entire process.
+**Core Innovation:** Our solution integrates the UR3e onto a rotary Robotic Transfer Unit (RTU). By introducing Kinematic Redundancy, we decouple the robot's motion from a static base. This "Workspace Multiplier" allows the system to bypass singularity zones (such as wrist alignment or elbow lock) by dynamically rotating the base. This ensures the robot can access areas and zones that are normally inaccessible due to the robot's inherent singularities, maintaining continuous, fluid motion throughout the entire process.
 
-![hello](https://github.com/user-attachments/assets/111619fb-c05f-4665-b8ae-f34c8c4df6e5)
+**Application Focus:** This proposal is specifically designed for artistic applications such as wall painting. The implementation of the gantry system would enable significant reductions in time and labor costs. With the gantry, the robot can reach numerous zones at angles that would be impossible to achieve without it. Additionally, it allows the robot to move with ease—moving up, down, rotating, and positioning itself according to specific needs—providing unprecedented flexibility for large-scale artistic work.
 
-<img width="720" height="342" alt="image" src="https://github.com/user-attachments/assets/a368df67-7841-4ce7-b570-78544dd15e42" />
-
+<img width="547" height="585" alt="image" src="https://github.com/user-attachments/assets/786f8d4c-7cf9-4eda-9a36-de3700555250" />
 
 ## Getting Started
 
@@ -54,6 +53,8 @@ This project presents a **7th-Axis Rotary Gantry** (External Axis) engineered to
 
 ## Demo
 The system operates using a **Coordinated Spiral Kinematic Path**:
+
+![hello](https://github.com/user-attachments/assets/111619fb-c05f-4665-b8ae-f34c8c4df6e5)
 
 * **Initialization:** The robot returns to "Home" position and initializes LiDAR-based area scanners for safety monitoring.
 * **Surface Parameters:** The operator inputs the target structure's radius and vertical coverage height.
