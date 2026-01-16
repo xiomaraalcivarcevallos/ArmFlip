@@ -18,7 +18,8 @@ This project presents a **7th-Axis Rotary Gantry** (External Axis) engineered to
 
 **Core Innovation:** Our solution integrates the UR3e onto a rotary Robotic Transfer Unit (RTU). By introducing **Kinematic Redundancy**, we decouple the robot's motion from a static base. This "Workspace Multiplier" allows the system to **bypass singularity zones** (such as wrist alignment or elbow lock) by dynamically rotating the base. This ensures the robot can access areas and zones that are normally inaccessible due to the robot's inherent singularities, maintaining continuous, fluid motion throughout the entire process.
 
-![hello](https://github.com/user-attachments/assets/6d889ebf-2fd6-4211-9288-61a408f63b08)
+![hello](https://github.com/user-attachments/assets/111619fb-c05f-4665-b8ae-f34c8c4df6e5)
+
 
 
 ## Getting Started
