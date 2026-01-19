@@ -4,6 +4,7 @@ This diagram illustrates the logical path of information from the initial design
 
 ### [ DATA ARCHITECTURE FLOW ]
 
+```text
 [ 1. DESIGN LAYER ]
        |
        v
@@ -33,3 +34,4 @@ This diagram illustrates the logical path of information from the initial design
                           \________________  __________________/
                                            \/
                                   [ COORDINATED MOTION ]
+
