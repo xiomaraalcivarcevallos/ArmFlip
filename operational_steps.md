@@ -1,40 +1,53 @@
-# Gantry Painting System: Operational Steps
+# How the Process Works: Gantry & Robot Integration
 
 ---
 
-## 1. System Initialization & Safety Check
-* **Startup:** Power on the Gantry System and the UR3e Robot.
-* **Hardware Sync:** The system initializes the **Slip Ring** and the **spray gun**.
-* **Safety Protocol:** The **LIDAR Safety Scanners** must be activated immediately.
+## 1. Initialization Phase
+At the start, the **Gantry** and **Robot** systems initialize simultaneously to ensure hardware synchronization.
 
-> [!IMPORTANT]
-> **Emergency Stop:** If the LIDAR fails or the target is "Out of Reach," the system will trigger an automatic Emergency Stop.
-
----
-
-## 2. Positioning
-* The robot moves to the designated **Start Position**.
-* **Radius:** Maintains a specific distance of **-150mm** from the target.
-* **Reach Verification:** The system verifies that the target remains within the gantry’s physical reach before starting.
+* **Reach Validation:** The system performs a geometric check to confirm the target is within the gantry's physical workspace. 
+    * *Failure:* Generates an **"Out of Reach"** error.
+* **Active Safety:** LIDAR scanners activate immediately. 
+    * *Failure:* Any detection of abnormal presence triggers an **Emergency Stop**.
 
 ---
 
-## 3. Painting Process (Execution)
-*The system operates in a continuous loop until the **Target Height** reaches **0**:*
+## 2. Positioning Phase
+The robot maneuvers to the initial coordinates to prepare for the first pass.
 
-1.  **Spray Activation:** The spray gun activates while the arm adjusts its extension to maintain a constant distance.
-2.  **Rotation:** The robot rotates around the object (up to 360°).
-3.  **Vertical Step:** Once a rotation is complete, the robot decrements the height (moves down one level) and repeats the cycle.
-
----
-
-## 4. Safety Monitoring
-* **Constant Surveillance:** The **"Safety Zone Clear?"** check runs continuously.
-* **Breach Protocol:** Any breach detected by the LIDAR or a system error will lead to an **Emergency Stop**, instantly killing the algorithm to prevent accidents.
+* **Target Offset:** Moves to a starting radius of **150mm** from the target.
+* **Redundant Safety Check:** A "Double Reach" verification ensures the actuator is within the operational limits of both the gantry structure and the robot arm's kinematics.
 
 ---
 
-## 5. Shut Down
-* **Idle Mode:** Once the painting is finished, the Gantry enters Idle Mode.
-* **Deactivation:** LIDAR scanners are deactivated.
-* **Exit:** The process ends, and the algorithm exits safely.
+## 3. Painting Phase (Nested Loops)
+The core execution is managed through two nested `while` loops to ensure full coverage:
+
+### **Logic Structure**
+> **Outer Loop:** While `current angle` ≤ 360° (Complete Rotation)  
+> **Inner Loop:** While `target height` > 0 (Top to Bottom)
+
+### **Execution Steps:**
+1.  **Spray Activation:** Engaging the spray gun.
+2.  **Dynamic Adjustment:** The arm extension adjusts in real-time to maintain a constant distance from the surface.
+3.  **Rotation:** Executes movement up to 360°.
+4.  **Verification:** Deactivates spray gun and confirms **"Safety Zone Clear"**.
+5.  **Iteration:** Decrements the target height (vertical step) and repeats the sequence.
+
+---
+
+## 4. Completion
+Once the conditions of the loops are met:
+* **Idle State:** The gantry returns to its home/idle position.
+* **Power Down:** Scanners are deactivated.
+* **Safe Exit:** The process concludes via a controlled emergency stop to ensure all systems remain locked.
+
+---
+
+## Safety Features Summary
+| Feature | Function |
+| :--- | :--- |
+| **Continuous Verification** | Ongoing safety zone monitoring throughout the loops. |
+| **Active LIDAR** | Real-time obstacle and breach detection. |
+| **Multi-point E-Stops** | Ability to kill the process at any phase of the algorithm. |
+| **Reach Verification** | Pre-movement checks to prevent mechanical strain or collisions. |
